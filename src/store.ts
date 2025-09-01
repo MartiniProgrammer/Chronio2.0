@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import type { ThemeName } from './theme';
 
 export interface Task {
   id: string;
@@ -23,7 +24,7 @@ export interface Label {
 }
 
 export interface Settings {
-  themeColor: string;
+  theme: ThemeName;
 }
 
 interface StoreState {
@@ -31,15 +32,18 @@ interface StoreState {
   appointments: Appointment[];
   labels: Label[];
   settings: Settings;
+  setTheme: (theme: ThemeName) => void;
 }
 
 export const useStore = create<StoreState>()(
-  persist<StoreState>(
-    () => ({
+  persist(
+    (set) => ({
       tasks: [],
       appointments: [],
       labels: [],
-      settings: { themeColor: '#3b82f6' },
+      settings: { theme: 'ocean' },
+      setTheme: (theme) =>
+        set((state) => ({ settings: { ...state.settings, theme } })),
     }),
     { name: 'chronio-store' }
   )
