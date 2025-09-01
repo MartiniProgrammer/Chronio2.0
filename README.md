@@ -9,7 +9,7 @@ Chronio 2.0 is a simple web-based calendar prototype designed for Windows downlo
 
 ## Development
 
-Open `index.html` in a modern browser to run the app.
+Run `npm run dev` to start the development server and open the URL it provides in a modern browser.
 
 ## Scripts
 

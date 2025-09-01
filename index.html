@@ -1,56 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chronio 2.0</title>
-  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header>
-    <h1>Chronio 2.0</h1>
-    <nav>
-      <button id="day-view-btn" class="nav-btn">Day</button>
-      <button id="week-view-btn" class="nav-btn">Week</button>
-      <button id="month-view-btn" class="nav-btn">Month</button>
-      <button id="settings-btn" class="nav-btn">Settings</button>
-    </nav>
-  </header>
-
-  <main>
-    <section id="day-view" class="view">
-      <div class="task-input">
-        <input id="task-text" type="text" placeholder="Task description" />
-        <input id="task-label" list="labels" placeholder="Label" />
-        <datalist id="labels"></datalist>
-        <input id="task-color" type="color" />
-        <button id="add-task-btn">Add Task</button>
-      </div>
-      <div class="day-layout">
-        <div id="task-pool" class="task-pool"></div>
-        <div id="day-schedule" class="schedule"></div>
-      </div>
-    </section>
-
-    <section id="week-view" class="view hidden">
-      <h2>This Week</h2>
-      <div id="week-tasks"></div>
-    </section>
-
-    <section id="month-view" class="view hidden">
-      <h2>Month</h2>
-      <div id="month-calendar" class="calendar"></div>
-    </section>
-
-    <section id="settings-view" class="view hidden">
-      <h2>Settings</h2>
-      <label>
-        Theme color:
-        <input id="theme-color" type="color" />
-      </label>
-    </section>
-  </main>
-
-  <script src="app.js"></script>
-</body>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chronio 2.0</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
